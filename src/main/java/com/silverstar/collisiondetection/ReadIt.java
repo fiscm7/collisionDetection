@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package collisiondetection;
+package com.silverstar.collisiondetection;
 
 
 import com.tinkerforge.IPConnection;
@@ -42,7 +42,7 @@ public class ReadIt {
 		// Set period for distance value callback to 0.2s (200ms)
 		// Note: The distance value callback is only called every 0.2 seconds
 		//       if the distance value has changed since the last call!
-		dus1.setDistanceCallbackPeriod(500);
+		dus1.setDistanceCallbackPeriod(1000);
 
 		// Add distance value listener
 		dus2.addDistanceListener((int distance) -> {
@@ -52,7 +52,7 @@ public class ReadIt {
 		// Set period for distance value callback to 0.2s (200ms)
 		// Note: The distance value callback is only called every 0.2 seconds
 		//       if the distance value has changed since the last call!
-		dus2.setDistanceCallbackPeriod(500);
+		dus2.setDistanceCallbackPeriod(1000);
 
 		// Add distance value listener
 		dus3.addDistanceListener((int distance) -> {
@@ -62,7 +62,7 @@ public class ReadIt {
 		// Set period for distance value callback to 0.2s (200ms)
 		// Note: The distance value callback is only called every 0.2 seconds
 		//       if the distance value has changed since the last call!
-		dus3.setDistanceCallbackPeriod(500);
+		dus3.setDistanceCallbackPeriod(1000);
 
 		// Add distance value listener
 		dus4.addDistanceListener((int distance) -> {
@@ -72,7 +72,7 @@ public class ReadIt {
 		// Set period for distance value callback to 0.2s (200ms)
 		// Note: The distance value callback is only called every 0.2 seconds
 		//       if the distance value has changed since the last call!
-		dus4.setDistanceCallbackPeriod(500);
+		dus4.setDistanceCallbackPeriod(1000);
 
 		System.out.println("Press key to exit"); System.in.read();
 		ipcon.disconnect();
